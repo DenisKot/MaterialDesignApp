@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_item_1"
+        android:icon="@mipmap/ic_number_0"
+        android:title="@string/nav1" />
+    <item
+        android:id="@+id/nav_item_2"
+        android:icon="@mipmap/ic_number_1"
+        android:title="@string/nav2" />
+    <item
+        android:id="@+id/nav_item_3"
+        android:icon="@mipmap/ic_number_2"
+        android:title="@string/nav3" />
+
+    <item
+        android:id="@+id/nav_item_4"
+        android:icon="@mipmap/ic_number_3"
+        android:title="@string/nav4" />
+    <item
+        android:id="@+id/nav_item_5"
+        android:icon="@mipmap/ic_number_4"
+        android:title="@string/nav5" />
+
+    <!--
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_item_1"
+            android:icon="@mipmap/ic_number_0"
+            android:title="@string/nav1" />
+
+        <item
+            android:id="@+id/nav_item_2"
+            android:icon="@mipmap/ic_number_1"
+            android:title="@string/nav2" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+    <item
+        android:id="@+id/nav_item_3"
+        android:icon="@mipmap/ic_number_2"
+        android:title="@string/nav3" />
+
+    <item
+        android:id="@+id/nav_item_4"
+        android:icon="@mipmap/ic_number_3"
+        android:title="@string/nav4" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+    <item
+        android:id="@+id/nav_item_5"
+        android:icon="@mipmap/ic_number_4"
+        android:title="@string/nav5" />
+    </group>
+    -->
+
+    <!--
+    <item
+        android:id="@+id/nav_item_1"
+        android:icon="@mipmap/ic_number_0"
+        android:title="@string/nav1">
+
+        <item
+            android:id="@+id/nav_item_2"
+            android:icon="@mipmap/ic_number_1"
+            android:title="@string/nav2" />
+        <item
+            android:id="@+id/nav_item_3"
+            android:icon="@mipmap/ic_number_2"
+            android:title="@string/nav3" />
+    </item>
+
+    <item
+        android:id="@+id/nav_item_4"
+        android:icon="@mipmap/ic_number_3"
+        android:title="@string/nav4">
+        <item
+            android:id="@+id/nav_item_5"
+            android:icon="@mipmap/ic_number_4"
+            android:title="@string/nav5" />
+    </item>
+    -->
+
+</menu>
