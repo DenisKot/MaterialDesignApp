@@ -3,9 +3,11 @@ package com.inspiriongames.materialdesignappdemo;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.PersistableBundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private CollapsingToolbarLayout collapsingToolbarLayout;
+    private FloatingActionButton fab;
     private int mSelectedId;
     private boolean mUserSawDrawer = false;
 
@@ -62,6 +66,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
         //final ImageView imageView = (ImageView) findViewById(R.id.meImageView);
         //Glide.with(this).load(R.drawable.me).centerCrop().into(imageView);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto", "the_matrix@ukr.net", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App Project");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
+            }
+        });
     }
 
     private void navigate() {

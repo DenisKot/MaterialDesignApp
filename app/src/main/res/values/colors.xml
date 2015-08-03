@@ -8,5 +8,6 @@
     <color name="colorTextPrimary">#212121</color>
     <color name="colorTextSecondary">#727272</color>
     <color name="backgroundColor">#ffffff</color>
+    <color name="window_background">#FFF5F5F5</color>
 
 </resources>
