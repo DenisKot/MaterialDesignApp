@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.PersistableBundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +14,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView mDrawer;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
     private int mSelectedId;
     private boolean mUserSawDrawer = false;
 
@@ -50,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mSelectedId = savedInstanceState == null ? R.id.nav_item_1 : savedInstanceState.getInt(SELECTED_ITEM_ID);
         navigate();
+
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+        collapsingToolbarLayout.setTitle(getString(R.string.my_name));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+        //final ImageView imageView = (ImageView) findViewById(R.id.meImageView);
+        //Glide.with(this).load(R.drawable.me).centerCrop().into(imageView);
     }
 
     private void navigate() {

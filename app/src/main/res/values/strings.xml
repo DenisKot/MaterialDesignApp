@@ -15,4 +15,5 @@
     <string name="text_dissmis">Dismiss</string>
     <string name="title_activity_tabs">TabsActivity</string>
     <string name="title_activity_material">MaterialActivity</string>
+    <string name="my_name">Denis Kotenko</string>
 </resources>
